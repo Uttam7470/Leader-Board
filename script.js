@@ -24,10 +24,7 @@ var scores = [
     
 ]
 
-// Sorting Functions
-// 0 = orignal
-// -1 = ab
-// 1 = ba
+
 function comparatorT(a,b)
 {
     if(a["score"] > b["score"])
@@ -47,7 +44,7 @@ function displayData(data)
 {
     let main = document.getElementById("info")
     //1. clear the old results
-    main.innerHTML = "";
+    main.innerText = "";
 
     //2. sort data
     data.sort(comparatorT)
@@ -56,6 +53,7 @@ function displayData(data)
     data.forEach((item, index) => {
 
         // div
+
         let box = document.createElement("div")
         box.classList.add("row")
 
